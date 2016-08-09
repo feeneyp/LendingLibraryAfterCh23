@@ -20,12 +20,12 @@ public class DVD extends Material {
 		licenced = true;
 	}
 	
-	public boolean lend(Customer customer) {
+	public String lend(Customer customer) {
 		if(licenced) {
 			return super.lend(customer);
 		}
 		else {
-			return false;
+			return "dvd unlicensed";
 		}
 	}
 	
